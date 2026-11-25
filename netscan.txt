@@ -1,0 +1,205 @@
+Starting Nmap 7.991 ( https://nmap.org ) at 2026-11-25 05:44 -0500
+NSE: Loaded 158 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 05:44
+Completed NSE at 05:44, 0.00s elapsed
+Initiating NSE at 05:44
+Completed NSE at 05:44, 0.00s elapsed
+Initiating NSE at 05:44
+Completed NSE at 05:44, 0.00s elapsed
+Initiating Parallel DNS resolution of 1 host. at 05:44
+Completed Parallel DNS resolution of 1 host. at 05:44, 0.50s elapsed
+Initiating Ping Scan at 05:44
+Scanning medirozahospital.com (199.188.201.16) [4 ports]
+Completed Ping Scan at 05:44, 0.02s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 05:44
+Completed Parallel DNS resolution of 1 host. at 05:44, 0.23s elapsed
+Initiating SYN Stealth Scan at 05:44
+Scanning medirozahospital.com (199.188.201.16) [1000 ports]
+Discovered open port 21/tcp on 199.188.201.16
+Discovered open port 993/tcp on 199.188.201.16
+Discovered open port 143/tcp on 199.188.201.16
+Discovered open port 995/tcp on 199.188.201.16
+Discovered open port 25/tcp on 199.188.201.16
+Discovered open port 80/tcp on 199.188.201.16
+Discovered open port 53/tcp on 199.188.201.16
+Discovered open port 110/tcp on 199.188.201.16
+Discovered open port 443/tcp on 199.188.201.16
+Discovered open port 587/tcp on 199.188.201.16
+Discovered open port 143/tcp on 199.188.201.16
+Discovered open port 80/tcp on 199.188.201.16
+Discovered open port 993/tcp on 199.188.201.16
+Discovered open port 587/tcp on 199.188.201.16
+Discovered open port 25/tcp on 199.188.201.16
+Discovered open port 53/tcp on 199.188.201.16
+Discovered open port 995/tcp on 199.188.201.16
+Discovered open port 110/tcp on 199.188.201.16
+Discovered open port 443/tcp on 199.188.201.16
+Discovered open port 26/tcp on 199.188.201.16
+Discovered open port 26/tcp on 199.188.201.16
+Discovered open port 465/tcp on 199.188.201.16
+Completed SYN Stealth Scan at 05:45, 38.74s elapsed (1000 total ports)
+Initiating Service scan at 05:45
+Scanning 12 services on medirozahospital.com (199.188.201.16)
+Completed Service scan at 05:48, 176.09s elapsed (12 services on 1 host)
+Initiating OS detection (try #1) against medirozahospital.com (199.188.201.16)
+Retrying OS detection (try #2) against medirozahospital.com (199.188.201.16)
+Initiating Traceroute at 05:48
+Completed Traceroute at 05:48, 0.01s elapsed
+Initiating Parallel DNS resolution of 1 host. at 05:48
+Completed Parallel DNS resolution of 1 host. at 05:48, 0.00s elapsed
+NSE: Script scanning 199.188.201.16.
+Initiating NSE at 05:48
+Completed NSE at 05:48, 35.17s elapsed
+Initiating NSE at 05:48
+NSE Timing: About 88.54% done; ETC: 05:50 (0:00:38 remaining)
+Completed NSE at 05:50, 85.03s elapsed
+Initiating NSE at 05:50
+Completed NSE at 05:50, 0.00s elapsed
+Nmap scan report for medirozahospital.com (199.188.201.16)
+Host is up (0.0030s latency).
+rDNS record for 199.188.201.16: server274-1.web-hosting.com
+Not shown: 988 filtered tcp ports (no-response)
+PORT    STATE SERVICE        VERSION
+21/tcp  open  ftp            Pure-FTPd
+| ssl-cert: Subject: commonName=*.web-hosting.com
+| Subject Alternative Name: DNS:*.web-hosting.com, DNS:web-hosting.com
+| Issuer: commonName=SSL.com TLS Issuing RSA CA R1/organizationName=SSL Corporation/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2026-11-03T15:55:12
+| Not valid after:  2027-05-20T15:34:46
+| MD5:     849b 84b6 780c 5163 ca5c c520 1f8e 49de
+| SHA-1:   ec12 7252 d849 ccaf 7226 70d1 b762 5c38 4c5b de0b
+|_SHA-256: 2edc 4bef b833 1480 d72c 9b51 ed99 2d00 5f2b e22e b6fb 6859 739e 59af 8219 62b2
+|_ssl-date: TLS randomness does not represent time
+25/tcp  open  smtp?
+|_smtp-commands: Couldn't establish connection on port 25
+26/tcp  open  smtp           Exim smtpd 4.100.1
+| smtp-commands: server274.web-hosting.com Hello medirozahospital.com [41.125.196.14], SIZE 52428800, LIMITS MAILMAX=1000 RCPTMAX=100, 8BITMIME, PIPELINING, PIPECONNECT, STARTTLS, HELP
+|_ Commands supported: AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=medirozahospital.com
+| Subject Alternative Name: DNS:medirozahospital.com, DNS:www.medirozahospital.com
+| Issuer: commonName=SSL.com TLS Issuing RSA CA R1/organizationName=SSL Corporation/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2026-08-14T20:59:46
+| Not valid after:  2027-02-28T21:05:45
+| MD5:     67bc c8a4 8bd7 e4e0 b4b5 213c c67c 1ad7
+| SHA-1:   951d c57d 93fd cf5c 8540 6d58 b8d5 248a c6e0 261b
+|_SHA-256: 2dc4 b813 7245 9ebc 4825 7c2c 7ada 1a2b bbc0 76bd 43cc ec30 7c20 fdc7 82b5 abaf
+53/tcp  open  domain         (unknown banner: BIND)
+| dns-nsid: 
+|_  bind.version: BIND
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|     bind
+|_    BIND
+80/tcp  open  http-proxy     HAProxy http proxy 2.0.0 or later
+|_http-server-header: LiteSpeed
+|_http-open-proxy: Proxy might be redirecting requests
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Did not follow redirect to https://medirozahospital.com/
+110/tcp open  pop3           Dovecot pop3d
+| ssl-cert: Subject: commonName=medirozahospital.com
+| Subject Alternative Name: DNS:medirozahospital.com, DNS:www.medirozahospital.com
+| Issuer: commonName=SSL.com TLS Issuing RSA CA R1/organizationName=SSL Corporation/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2026-08-14T20:59:46
+| Not valid after:  2027-02-28T21:05:45
+| MD5:     67bc c8a4 8bd7 e4e0 b4b5 213c c67c 1ad7
+| SHA-1:   951d c57d 93fd cf5c 8540 6d58 b8d5 248a c6e0 261b
+|_SHA-256: 2dc4 b813 7245 9ebc 4825 7c2c 7ada 1a2b bbc0 76bd 43cc ec30 7c20 fdc7 82b5 abaf
+|_ssl-date: TLS randomness does not represent time
+|_pop3-capabilities: TOP STLS USER PIPELINING CAPA SASL(PLAIN LOGIN) RESP-CODES UIDL AUTH-RESP-CODE
+143/tcp open  imap           Dovecot imapd
+|_ssl-date: TLS randomness does not represent time
+|_imap-capabilities: ID OK have Pre-login listed IDLE LITERAL+ IMAP4rev1 capabilities more ENABLE SASL-IR AUTH=LOGINA0001 AUTH=PLAIN LOGIN-REFERRALS STARTTLS post-login
+| ssl-cert: Subject: commonName=medirozahospital.com
+| Subject Alternative Name: DNS:medirozahospital.com, DNS:www.medirozahospital.com
+| Issuer: commonName=SSL.com TLS Issuing RSA CA R1/organizationName=SSL Corporation/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2026-08-14T20:59:46
+| Not valid after:  2027-02-28T21:05:45
+| MD5:     67bc c8a4 8bd7 e4e0 b4b5 213c c67c 1ad7
+| SHA-1:   951d c57d 93fd cf5c 8540 6d58 b8d5 248a c6e0 261b
+|_SHA-256: 2dc4 b813 7245 9ebc 4825 7c2c 7ada 1a2b bbc0 76bd 43cc ec30 7c20 fdc7 82b5 abaf
+443/tcp open  ssl/http-proxy HAProxy http proxy 2.0.0 or later
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=*.web-hosting.com
+| Subject Alternative Name: DNS:*.web-hosting.com, DNS:web-hosting.com
+| Issuer: commonName=SSL.com TLS Issuing RSA CA R1/organizationName=SSL Corporation/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2026-11-03T15:55:12
+| Not valid after:  2027-05-20T15:34:46
+| MD5:     849b 84b6 780c 5163 ca5c c520 1f8e 49de
+| SHA-1:   ec12 7252 d849 ccaf 7226 70d1 b762 5c38 4c5b de0b
+|_SHA-256: 2edc 4bef b833 1480 d72c 9b51 ed99 2d00 5f2b e22e b6fb 6859 739e 59af 8219 62b2
+| tls-alpn: 
+|   h2
+|_  http/1.1
+465/tcp open  ssl/smtp       Exim smtpd 4.100.1
+|_ssl-date: TLS randomness does not represent time
+| smtp-commands: server274.web-hosting.com Hello medirozahospital.com [41.125.196.14], SIZE 52428800, LIMITS MAILMAX=1000 RCPTMAX=100, 8BITMIME, PIPELINING, PIPECONNECT, AUTH PLAIN LOGIN, HELP
+|_ Commands supported: AUTH HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP
+587/tcp open  smtp           Exim smtpd 4.100.1
+| ssl-cert: Subject: commonName=medirozahospital.com
+| Subject Alternative Name: DNS:medirozahospital.com, DNS:www.medirozahospital.com
+| Issuer: commonName=SSL.com TLS Issuing RSA CA R1/organizationName=SSL Corporation/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2026-08-14T20:59:46
+| Not valid after:  2027-02-28T21:05:45
+| MD5:     67bc c8a4 8bd7 e4e0 b4b5 213c c67c 1ad7
+| SHA-1:   951d c57d 93fd cf5c 8540 6d58 b8d5 248a c6e0 261b
+|_SHA-256: 2dc4 b813 7245 9ebc 4825 7c2c 7ada 1a2b bbc0 76bd 43cc ec30 7c20 fdc7 82b5 abaf
+| smtp-commands: server274.web-hosting.com Hello medirozahospital.com [41.125.196.14], SIZE 52428800, LIMITS MAILMAX=1000 RCPTMAX=100, 8BITMIME, PIPELINING, PIPECONNECT, STARTTLS, HELP
+|_ Commands supported: AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP
+|_ssl-date: TLS randomness does not represent time
+993/tcp open  ssl/imap       Dovecot imapd
+|_ssl-date: TLS randomness does not represent time
+995/tcp open  ssl/pop3       Dovecot pop3d
+|_ssl-date: TLS randomness does not represent time
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-TCP:V=7.991%I=7%D=11/25%Time=6B06BC4A%P=x86_64-pc-linux-gnu%r(DN
+SF:SVersionBindReqTCP,3F,"\0=\0\x06\x85\0\0\x01\0\x01\0\x01\0\0\x07version
+SF:\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\x05\x04BIND\xc0\x0
+SF:c\0\x02\0\x03\0\0\0\0\0\x02\xc0\x0c");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: VoIP adapter|bridge|general purpose
+Running (JUST GUESSING): AT&T embedded (89%), Oracle Virtualbox (88%), Slirp (88%), QEMU (86%)
+OS CPE: cpe:/o:oracle:virtualbox cpe:/a:danny_gasparovski:slirp cpe:/a:qemu:qemu
+Aggressive OS guesses: AT&T BGW210 voice gateway (89%), Oracle Virtualbox Slirp NAT bridge (88%), QEMU user mode network gateway (86%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=17 (Good luck!)
+IP ID Sequence Generation: Randomized
+Service Info: Host: server274.web-hosting.com; Device: load balancer
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT     ADDRESS
+1   0.89 ms server274-1.web-hosting.com (199.188.201.16)
+
+NSE: Script Post-scanning.
+Initiating NSE at 05:50
+Completed NSE at 05:50, 0.00s elapsed
+Initiating NSE at 05:50
+Completed NSE at 05:50, 0.00s elapsed
+Initiating NSE at 05:50
+Completed NSE at 05:50, 0.00s elapsed
+Read data files from: /usr/share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 340.30 seconds
+           Raw packets sent: 3077 (139.660KB) | Rcvd: 1329 (55.183KB)
