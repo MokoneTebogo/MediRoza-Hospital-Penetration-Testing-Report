@@ -126,6 +126,9 @@ Nmap identified several exposed services and confirmed that HTTP/HTTPS services 
 #### Evidence — Network Reconnaissance
 - **Nmap** — Used to identify open ports and exposed network services that could provide potential entry points into the target.
 
+<img width="1919" height="1079" alt="nmap" src="https://github.com/user-attachments/assets/6a63242c-f271-4386-941c-565ab859235d" />
+
+
 Further web reconnaissance was performed using tools including nslookup, DNSRecon, WhatWeb, cURL, and WAFW00F.
 - **nslookup** — Used to resolve the target domain name to its associated IP address and verify DNS information.
 - **DNSRecon** — Used to enumerate DNS records such as nameservers, mail servers, IP addresses, SPF, and DMARC information.
