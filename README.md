@@ -132,6 +132,7 @@ Nmap identified several exposed services and confirmed that HTTP/HTTPS services 
 <br>
 <br>
 Further web reconnaissance was performed using tools including nslookup, DNSRecon, WhatWeb, cURL, and WAFW00F.
+
 - **nslookup** — Used to resolve the target domain name to its associated IP address and verify DNS information.
 
 <img width="1917" height="154" alt="nslookup" src="https://github.com/user-attachments/assets/392d914b-65e8-49fd-9ec7-5711635e7032" />
@@ -154,11 +155,13 @@ These activities helped establish the target's DNS configuration, HTTP behaviour
 
 
 <br>
+<br>
 - **WhatWeb** — Used to fingerprint the web application and identify technologies, server software, frameworks, and other web components.
 
 <img width="940" height="332" alt="whatweb 1" src="https://github.com/user-attachments/assets/d0151e16-b413-4eae-8b83-0fecdd2b64ce" />
 
 
+<br>
 <br>
 - **WAFW00F** — Used to determine whether the target web application was protected by a Web Application Firewall (WAF).
 
@@ -166,11 +169,13 @@ These activities helped establish the target's DNS configuration, HTTP behaviour
 
 
 <br>
+<br>
 - **cURL** — Used to send HTTP requests to the target and inspect the responses returned by the web server.
 
 <img width="1919" height="1079" alt="curl" src="https://github.com/user-attachments/assets/9d0d1e2d-0dae-4a31-be2d-9a5e529062aa" />
 
 
+<br>
 <br>
 - **cURL -I** — Used to retrieve and inspect HTTP response headers without downloading the full page content.
 
@@ -178,12 +183,14 @@ These activities helped establish the target's DNS configuration, HTTP behaviour
 
 
 <br>
+<br>
 - **cURL -v** — Used to view detailed HTTP connection information, including the request, response headers, TLS connection, and redirects.
 
 <img width="1919" height="1079" alt="curl v" src="https://github.com/user-attachments/assets/9a9540e7-4767-4d95-b405-377d2b7e18da" />
 
 
 
+<br>
 <br>
 #### Directory and Resource Enumeration
 Web content enumeration was subsequently performed using Dirsearch.
@@ -196,6 +203,7 @@ The enumeration identified several accessible resources, including an `/old/` di
 
 
 <br>
+<br>
 Further investigation of the old resources identified an exposed backup associated with the application.
 
 #### Evidence — Old Backup Discovery
@@ -203,6 +211,7 @@ Further investigation of the old resources identified an exposed backup associat
 <img width="1919" height="1079" alt="db_backup" src="https://github.com/user-attachments/assets/c6daa474-be99-4fbb-b648-681d37d9a7c9" />
 
 
+<br>
 <br>
 #### Patient Portal Investigation
 The patient-facing application functionality was investigated as part of the search for the required laboratory reports.
@@ -212,12 +221,14 @@ Burp Suite was configured to intercept browser traffic generated while interacti
 
 
 <br>
+<br>
 #### Evidence — Burp Suite Interception
 - **SQL Injection Testing** — Used to assess whether the application improperly handled user-supplied input in database queries and could potentially allow unauthorized database access.
 
 <img width="1919" height="1079" alt="sql inject" src="https://github.com/user-attachments/assets/f754231e-8e2e-41d4-bf79-00df4c96b3fb" />
 
 
+<br>
 <br>
 #### Successful Report Discovery
 Testing resulted in access to a patient laboratory-report page containing the three PDF reports required by M1.
@@ -228,6 +239,7 @@ This confirmed that confidential patient laboratory documents were exposed throu
 <img width="957" height="1010" alt="Files" src="https://github.com/user-attachments/assets/8d0a2548-b73f-4a74-9bbd-0f5a7b6b52fa" />
 
 
+<br>
 <br>
 > ⚠️ Patient names, medical information and other personally identifiable information must be redacted before this evidence is published publicly.
 
@@ -264,6 +276,7 @@ The tool installation/version was verified before the cracking process was perfo
 
 
 <br>
+<br>
 ##### Successful Document Access
 After recovering the required passwords, the protected laboratory reports could be opened.
 - Evidence — Report 1 Opened
@@ -271,16 +284,19 @@ After recovering the required passwords, the protected laboratory reports could 
 <img width="1919" height="1079" alt="report 1" src="https://github.com/user-attachments/assets/3ad9f084-8864-484a-9f8c-8d647926a710" />
 
 <br>
+<br>
 - Evidence — Report 2 Opened
 
 <img width="1919" height="1079" alt="report 2" src="https://github.com/user-attachments/assets/8c10e806-95fb-4fd7-a536-6a3b31ceafd7" />
 
+<br>
 <br>
 - Evidence — Report 3 Opened
 
 <img width="1919" height="1079" alt="report 3" src="https://github.com/user-attachments/assets/bab31562-66d7-4ebf-86e6-fe4f47c5fdd0" />
 
 
+<br>
 <br>
 This demonstrated that the passwords protecting the confidential medical documents were not sufficiently resistant to the authorized password-recovery testing.
 
@@ -330,6 +346,7 @@ The assessment confirmed that salary records for 30 hospital employees were pres
 
 
 <br>
+<br>
 - Suggested filename:
 - **cURL -s** — Used to send HTTP requests in silent mode, displaying the server response without progress or transfer information for cleaner analysis.
 - Salaries will also be found on the `Stakeholders.txt` file
@@ -337,6 +354,7 @@ The assessment confirmed that salary records for 30 hospital employees were pres
 <img width="1918" height="149" alt="filenames" src="https://github.com/user-attachments/assets/1c08527f-d907-4d88-aa38-636d24b9ec4d" />
 
 
+<br>
 <br>
 > ⚠️ National identification numbers, telephone numbers, email addresses and other unnecessary personal information must be redacted from the public evidence.
 
@@ -355,6 +373,7 @@ Suggested filename:
 
 <img width="1918" height="443" alt="Shareholders" src="https://github.com/user-attachments/assets/fe9b9235-8010-41f4-bf1c-fb4a131ac907" />
 
+<br>
 <br>
 
 
