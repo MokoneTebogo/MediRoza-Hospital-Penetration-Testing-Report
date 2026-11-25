@@ -9,8 +9,8 @@
 | Pen Tester Name | Tebogo Mokone |
 | Target | MediRoza Hospital Web Application |
 | Assessment Type | Web Application Penetration Testing |
-| Authorization | Written Permission Granted |
-| Environment | Controlled Educational Environment |
+| Authorization | ✅ Written Permission Granted |
+| Environment | Controlled Educational Environment | 
 | Program | Networkwalks Cybersecurity |
 | Platform | Kali Linux |
 | Report | Detailed Penetration Testing Report |
