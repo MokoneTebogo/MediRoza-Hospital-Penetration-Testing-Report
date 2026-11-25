@@ -133,13 +133,14 @@ Nmap identified several exposed services and confirmed that HTTP/HTTPS services 
 <br>
 Further web reconnaissance was performed using tools including nslookup, DNSRecon, WhatWeb, cURL, and WAFW00F.
 
-- **nslookup** — Used to resolve the target domain name to its associated IP address and verify DNS information.
+**nslookup** — Used to resolve the target domain name to its associated IP address and verify DNS information.
 
 <img width="1917" height="154" alt="nslookup" src="https://github.com/user-attachments/assets/392d914b-65e8-49fd-9ec7-5711635e7032" />
 
 <br>
 <br>
-- **DNSRecon** — Used to enumerate DNS records such as nameservers, mail servers, IP addresses, SPF, and DMARC information.
+
+**DNSRecon** — Used to enumerate DNS records such as nameservers, mail servers, IP addresses, SPF, and DMARC information.
 
 <img width="1916" height="447" alt="dnsrecon" src="https://github.com/user-attachments/assets/672d16fa-c31a-4f2a-a5d7-c08f2cc366aa" />
 
@@ -149,42 +150,47 @@ Further web reconnaissance was performed using tools including nslookup, DNSReco
 These activities helped establish the target's DNS configuration, HTTP behaviour, server technologies, and available web attack surface.
 
 #### Evidence — Web Reconnaissance
-- **WHOIS** — Used to gather publicly available domain registration, registrar, nameserver, and domain-related information.
+**WHOIS** — Used to gather publicly available domain registration, registrar, nameserver, and domain-related information.
 
 <img width="1919" height="1079" alt="whois" src="https://github.com/user-attachments/assets/ede8d857-c72e-4663-b39e-0c219c634c4c" />
 
 
 <br>
 <br>
-- **WhatWeb** — Used to fingerprint the web application and identify technologies, server software, frameworks, and other web components.
+
+**WhatWeb** — Used to fingerprint the web application and identify technologies, server software, frameworks, and other web components.
 
 <img width="940" height="332" alt="whatweb 1" src="https://github.com/user-attachments/assets/d0151e16-b413-4eae-8b83-0fecdd2b64ce" />
 
 
 <br>
 <br>
-- **WAFW00F** — Used to determine whether the target web application was protected by a Web Application Firewall (WAF).
+
+**WAFW00F** — Used to determine whether the target web application was protected by a Web Application Firewall (WAF).
 
 <img width="1913" height="361" alt="wafw00f" src="https://github.com/user-attachments/assets/e984f83f-b5c9-4f36-9082-e110302f84f2" />
 
 
 <br>
 <br>
-- **cURL** — Used to send HTTP requests to the target and inspect the responses returned by the web server.
+
+**cURL** — Used to send HTTP requests to the target and inspect the responses returned by the web server.
 
 <img width="1919" height="1079" alt="curl" src="https://github.com/user-attachments/assets/9d0d1e2d-0dae-4a31-be2d-9a5e529062aa" />
 
 
 <br>
 <br>
-- **cURL -I** — Used to retrieve and inspect HTTP response headers without downloading the full page content.
+
+**cURL -I** — Used to retrieve and inspect HTTP response headers without downloading the full page content.
 
 <img width="1907" height="192" alt="curl I" src="https://github.com/user-attachments/assets/96663b72-7f5c-4014-a182-0f1cfc38d097" />
 
 
 <br>
 <br>
-- **cURL -v** — Used to view detailed HTTP connection information, including the request, response headers, TLS connection, and redirects.
+
+**cURL -v** — Used to view detailed HTTP connection information, including the request, response headers, TLS connection, and redirects.
 
 <img width="1919" height="1079" alt="curl v" src="https://github.com/user-attachments/assets/9a9540e7-4767-4d95-b405-377d2b7e18da" />
 
@@ -192,12 +198,13 @@ These activities helped establish the target's DNS configuration, HTTP behaviour
 
 <br>
 <br>
+
 #### Directory and Resource Enumeration
 Web content enumeration was subsequently performed using Dirsearch.
 The enumeration identified several accessible resources, including an `/old/` directory, which returned a successful HTTP response and required further investigation.
 
 #### Evidence — Directory Enumeration
-- **Dirsearch** — Used to enumerate hidden directories and files on the web server, helping identify exposed resources such as the `/old/` directory for further investigation.
+**Dirsearch** — Used to enumerate hidden directories and files on the web server, helping identify exposed resources such as the `/old/` directory for further investigation.
 
 <img width="1919" height="1079" alt="dirsearch" src="https://github.com/user-attachments/assets/1cbfccff-4476-4386-8015-fce7b0824ac6" />
 
@@ -213,15 +220,18 @@ Further investigation of the old resources identified an exposed backup associat
 
 <br>
 <br>
+
 #### Patient Portal Investigation
+
 The patient-facing application functionality was investigated as part of the search for the required laboratory reports.
-Burp Suite was configured to intercept browser traffic generated while interacting with the patient portal.
+**Burp Suite** was configured to intercept browser traffic generated while interacting with the patient portal.
 
 <img width="1919" height="1079" alt="burpsuite" src="https://github.com/user-attachments/assets/018649c8-93c3-49a4-b4a3-2145bb480352" />
 
 
 <br>
 <br>
+
 #### Evidence — Burp Suite Interception
 - **SQL Injection Testing** — Used to assess whether the application improperly handled user-supplied input in database queries and could potentially allow unauthorized database access.
 
@@ -230,6 +240,7 @@ Burp Suite was configured to intercept browser traffic generated while interacti
 
 <br>
 <br>
+
 #### Successful Report Discovery
 Testing resulted in access to a patient laboratory-report page containing the three PDF reports required by M1.
 
@@ -277,21 +288,24 @@ The tool installation/version was verified before the cracking process was perfo
 
 <br>
 <br>
+
 ##### Successful Document Access
 After recovering the required passwords, the protected laboratory reports could be opened.
-- Evidence — Report 1 Opened
+- **Evidence — Report 1 Opened**
 
 <img width="1919" height="1079" alt="report 1" src="https://github.com/user-attachments/assets/3ad9f084-8864-484a-9f8c-8d647926a710" />
 
 <br>
 <br>
-- Evidence — Report 2 Opened
+
+- **Evidence — Report 2 Opened**
 
 <img width="1919" height="1079" alt="report 2" src="https://github.com/user-attachments/assets/8c10e806-95fb-4fd7-a536-6a3b31ceafd7" />
 
 <br>
 <br>
-- Evidence — Report 3 Opened
+
+- **Evidence — Report 3 Opened**
 
 <img width="1919" height="1079" alt="report 3" src="https://github.com/user-attachments/assets/bab31562-66d7-4ebf-86e6-fe4f47c5fdd0" />
 
@@ -347,8 +361,8 @@ The assessment confirmed that salary records for 30 hospital employees were pres
 
 <br>
 <br>
-- Suggested filename:
-- **cURL -s** — Used to send HTTP requests in silent mode, displaying the server response without progress or transfer information for cleaner analysis.
+
+**cURL -s** — Used to send HTTP requests in silent mode, displaying the server response without progress or transfer information for cleaner analysis.
 - Salaries will also be found on the `Stakeholders.txt` file
 
 <img width="1918" height="149" alt="filenames" src="https://github.com/user-attachments/assets/1c08527f-d907-4d88-aa38-636d24b9ec4d" />
