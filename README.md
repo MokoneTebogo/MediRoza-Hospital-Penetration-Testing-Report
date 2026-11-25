@@ -130,17 +130,20 @@ Nmap identified several exposed services and confirmed that HTTP/HTTPS services 
 
 
 <br>
+<br>
 Further web reconnaissance was performed using tools including nslookup, DNSRecon, WhatWeb, cURL, and WAFW00F.
 - **nslookup** — Used to resolve the target domain name to its associated IP address and verify DNS information.
 
 <img width="1917" height="154" alt="nslookup" src="https://github.com/user-attachments/assets/392d914b-65e8-49fd-9ec7-5711635e7032" />
 
 <br>
+<br>
 - **DNSRecon** — Used to enumerate DNS records such as nameservers, mail servers, IP addresses, SPF, and DMARC information.
 
 <img width="1916" height="447" alt="dnsrecon" src="https://github.com/user-attachments/assets/672d16fa-c31a-4f2a-a5d7-c08f2cc366aa" />
 
 
+<br>
 <br>
 These activities helped establish the target's DNS configuration, HTTP behaviour, server technologies, and available web attack surface.
 
