@@ -306,10 +306,6 @@ mediroza_db_backup_2019.sql
 The backup identified itself as an internal MediRoza Hospital database backup and contained confidential staff and shareholder records.
 - Evidence — Backup Discovery
 
-<img width="1919" height="1079" alt="db_backup" src="https://github.com/user-attachments/assets/5be86cec-774a-4960-8ca0-ea36091a6773" />
-
-
-
 Analysis of the exposed database contents revealed two particularly sensitive datasets:
 1. Hospital employee information and salary data
 2. Hospital shareholder information
@@ -351,13 +347,14 @@ The exposed information included:
 
 The assessment identified 10 shareholder records within the exposed database.
 - Evidence — Shareholder Data
+Suggested filename:
+- Shareholder and staff details will also be found on the `Stakeholders.txt` file
 
 <img width="1918" height="443" alt="Shareholders" src="https://github.com/user-attachments/assets/fe9b9235-8010-41f4-bf1c-fb4a131ac907" />
 
 
 
-- Suggested filename:
-- Shareholder and staff details will also be found on the `Stakeholders.txt` file
+
 
 ##### Impact
 Exposure of an internal database backup represents a severe confidentiality failure.
